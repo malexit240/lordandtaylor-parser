@@ -1,0 +1,979 @@
+{
+    "ProductDetails": {
+        "main_products": [
+            {
+                "fit_predictor": {
+                    "enabled": true,
+                    "ssp_key": "lordandtaylor",
+                    "ssp_version": "v1"
+                },
+                "pick_up_in_store": {
+                    "enabled": true,
+                    "is_international": true,
+                    "buy_online_enabled": true,
+                    "bopus_mobile_enabled": true,
+                    "same_day_delivery_form_url": "/v1/same-day-delivery-service/getDeliveryRequestForm",
+                    "fulfillment_radio_group": [
+                        {
+                            "key": "ship_it",
+                            "value": "SHIP IT"
+                        },
+                        {
+                            "key": "pick_up_in_store",
+                            "value": "PICK UP IN STORE"
+                        }
+                    ],
+                    "in_store_inventory_check": {
+                        "oms_inventory_url": "/v2/omsinventory-service",
+                        "v2_endpoint": true,
+                        "unit_of_measure": "MILE",
+                        "banner": "LT",
+                        "country": "US",
+                        "distance": 100
+                    },
+                    "labels": {
+                        "tooltip": "Stores Near You",
+                        "show_more": "Show More",
+                        "check_stores": "Check Stores",
+                        "zip_code": "Zip Code",
+                        "distance_unit_of_measure": "Miles",
+                        "buy_online_pick_up_button": "Buy Online & Pick Up"
+                    },
+                    "messages": {
+                        "no_availability_near_you": "This item is not available at a store near you.",
+                        "available_for_purchase_in_store_only": "Available For Purchase In Store",
+                        "store_hours_template": "Open {0} Today",
+                        "zip_code_invalid": "Enter a valid zip code",
+                        "tooltip_disclaimer": "Order 3 hours before store closing to get it on the same day. We will let you know when your order is ready for pickup.",
+                        "store_closed": "Closed Today",
+                        "same_day_delivery_title": "SAME DAY DELIVERY IN NYC",
+                        "same_day_delivery_link": "GET IT TODAY"
+                    }
+                },
+                "description": "A hooded windbreaker with style to spare. It's a breeze. This hooded windbreaker puts smooth comfort between you and blustery weather. Blocks of color and adidas details seal the deal.<ul><li>Attached drawstring hood</li><li>Long sleeves</li><li>Elasticized cuffs</li><li>Front zip closure</li><li>Colorblock and logo details</li><li>Polyester</li><li>Machine wash</li><li>Imported</li></ul>",
+                "price": {
+                    "enabled": true,
+                    "alternate_copy": "",
+                    "list_price_label": "",
+                    "list_price": {
+                        "local_currency_code": "UAH",
+                        "local_currency_symbol": "&nbsp;",
+                        "local_currency_value": "1683.38",
+                        "usd_currency_value": "65.00",
+                        "default_currency_value": "65.00"
+                    },
+                    "sale_price_label": "Now",
+                    "sale_price": {
+                        "local_currency_code": "UAH",
+                        "local_currency_symbol": "&nbsp;",
+                        "local_currency_value": "1262.53",
+                        "usd_currency_value": "48.75",
+                        "default_currency_value": "48.75"
+                    },
+                    "on_sale": true,
+                    "on_clearance": false
+                },
+                "add_to_bag_submit_btn": {
+                    "enabled": true,
+                    "label": "ADD TO BAG",
+                    "action": {
+                        "endpoint": "add_saks_suggests_item_service_product_array",
+                        "input_value": "checkout"
+                    },
+                    "failure_message": "Please select a color and/or size."
+                },
+                "product_detail_tabs": {
+                    "enabled": true,
+                    "details_tab": {
+                        "enabled": true,
+                        "label": "Details"
+                    },
+                    "shipping_messages_tab": {
+                        "enabled": true,
+                        "label": "Shipping & Returns"
+                    }
+                },
+                "high_demand_message": {
+                    "enabled": true,
+                    "message": "DUE TO HIGH DEMAND, A CUSTOMER MAY ORDER NO MORE THAN 99 UNITS OF THIS ITEM EVERY THIRTY DAYS.",
+                    "purchase_limit_threshold": 99
+                },
+                "rewards": {
+                    "enabled": false,
+                    "has_image": true,
+                    "messages": {
+                        "earn_label": "Earn",
+                        "loyalty_message_member": "Earn {0} points with your SaksFirst Card",
+                        "points_on_this_item_label": "points when purchasing with a SaksFirst Credit Card",
+                        "learn_more_label": "Learn More",
+                        "earn_at_least_label": "Earn at least",
+                        "loyalty_message_nonmember": "Earn at least {0} points with the SaksFirst Card",
+                        "points_on_item_member_label": "points when purchasing with your SaksFirst Credit Card"
+                    },
+                    "links": {
+                        "landing_page": "https://www.lordandtaylor.com/SaksFirst"
+                    },
+                    "points_info": {
+                        "default_multiplier": 2
+                    },
+                    "countries": [
+                        "US"
+                    ],
+                    "tooltip_messages": {
+                        "learn_more_url": "/SaksFirst",
+                        "not_member": "Not a member?",
+                        "account_message_logged_out": "Sign in",
+                        "account_message_url": "/account/summary",
+                        "view_points": "to view your points & rewards.",
+                        "sf_member": "Are you a SaksFirst member?",
+                        "account_message_unlinked": "Add your account"
+                    }
+                },
+                "category_paths": [
+                    "/assortments/saksmain/shopcategory/men/apparel/coatsjackets/jackets/0500089423948/",
+                    "/assortments/saksmain/shopcategory/men/apparel/activewear/0500089423948/"
+                ],
+                "intl_shipping_restriction": {
+                    "enabled": false,
+                    "label": "Please note",
+                    "link": {
+                        "label": "This item cannot be shipped to Ukraine",
+                        "url": "https://www.lordandtaylor.com"
+                    },
+                    "message": "Sorry this item cannot be shipped internationally."
+                },
+                "fit_model_message": {
+                    "enabled": false,
+                    "message": ""
+                },
+                "call_to_order_message": {
+                    "enabled": false,
+                    "label": "",
+                    "message": ""
+                },
+                "colors": {
+                    "enabled": true,
+                    "show_swatches": true,
+                    "color_label": "Color",
+                    "colors": [
+                        {
+                            "id": 0,
+                            "label": "Black White",
+                            "value": "#000000",
+                            "is_value_an_image": false,
+                            "colorize_image_url": "0500089423948_BLACKWHITE",
+                            "is_soldout": false,
+                            "is_waitlistable": false
+                        },
+                        {
+                            "id": 1,
+                            "label": "Indigo Ink",
+                            "value": "#2D3961",
+                            "is_value_an_image": false,
+                            "colorize_image_url": "0500089423948_INDIGOINK",
+                            "is_soldout": false,
+                            "is_waitlistable": false
+                        }
+                    ]
+                },
+                "brand_name": {
+                    "enabled": true,
+                    "label": "Adidas",
+                    "url": "https://www.lordandtaylor.com/search/EndecaSearch.jsp?bmText=SearchString&N_Dim=0&Ntk=Entire+Site&Ntt=Adidas"
+                },
+                "bridal": {
+                    "is_bridal_eligible": false,
+                    "is_bridal_price_removal": false,
+                    "schedule_appointment_btn": {
+                        "enabled": false,
+                        "label": "",
+                        "url": ""
+                    },
+                    "symbol_quantity": 0,
+                    "symbol": "$"
+                },
+                "categories": [
+                    "Men/Apparel/CoatsJackets/Jackets",
+                    "Men/Apparel/Activewear"
+                ],
+                "order_from_full_site_message": {
+                    "enabled": false,
+                    "message": "To order this item, please go to our main site or call 1.877.551.SAKS(7257)"
+                },
+                "edit_bag_submit_btn": {
+                    "enabled": true,
+                    "label": "APPLY",
+                    "action": {
+                        "endpoint": "edit_cart_item_service",
+                        "input_value": ""
+                    }
+                },
+                "holiday_cutoff_message": {
+                    "enabled": false,
+                    "holiday_name": "",
+                    "holiday_message": ""
+                },
+                "favorite": {
+                    "favoriteable": true,
+                    "image_url": "https://s7d9.scene7.com/is/image/LordandTaylor/0500089423948"
+                },
+                "gift_card": {
+                    "is_gift_card": false,
+                    "is_virtual_gift_card": false,
+                    "action": {
+                        "endpoint": "saks_add_to_cart",
+                        "input_value": "enter_recipient"
+                    },
+                    "label": "Denomination"
+                },
+                "additional_information": {
+                    "enabled": false,
+                    "label": "Additional Information",
+                    "cannot_be_returned_message": {
+                        "enabled": false,
+                        "message": "Cannot be returned"
+                    },
+                    "gift_wrap_not_allowed": {
+                        "enabled": false,
+                        "message": "Please Note: This item cannot be gift wrapped."
+                    },
+                    "drop_ship_time_line": {
+                        "enabled": false,
+                        "label": "Shipping timeline for this item",
+                        "url": "https://www.lordandtaylor.com/?PRODUCT%3C%3Eprd_id=845524442636084"
+                    },
+                    "usps_ship_ok_message": {
+                        "enabled": false,
+                        "message": "Cannot be shipped to a P.O. Box, APO/FPO or U.S. Territory"
+                    },
+                    "restricted_ship_type": {
+                        "enabled": false,
+                        "message": "Cannot be shipped via  delivery"
+                    },
+                    "restricted_ship_to_state": {
+                        "enabled": false,
+                        "message": "Cannot be shipped to:",
+                        "state_name": "",
+                        "url": "https://www.lordandtaylor.com/html/contextual_popups/StateShippingRestriction.jsp"
+                    }
+                },
+                "gift_with_purchase_message": {
+                    "enabled": false,
+                    "message": "Complimentary"
+                },
+                "is_new": false,
+                "simple_shipping_statement": {
+                    "message": "ALWAYS FREE SHIPPING on your $99 order (or $49 beauty purchase). If, for any reason, you are not completely satisfied, you may return your purchase for an exchange or refund. Online purchase may also be returned, free of charge, to any Lord & Taylor store.",
+                    "link": {
+                        "label": "Details",
+                        "url": "/International"
+                    }
+                },
+                "product_code": "0500089423948",
+                "clarity_event_tags": {
+                    "product_name_event": {
+                        "event_id": "131",
+                        "value": "Essentials Colorblock Windbreaker"
+                    },
+                    "product_id_event": {
+                        "event_id": "1012",
+                        "value": "845524442636084"
+                    },
+                    "group_id_event": {
+                        "event_id": "1112",
+                        "value": "21"
+                    }
+                },
+                "add_to_favorites": {
+                    "enabled": false,
+                    "how_to": "Add to Favorites How-TO",
+                    "failure_message": "Failure message",
+                    "endpoint": {
+                        "base_url": "/v1/wishlist-service/organizations/saks-dev/accounts/",
+                        "path": "/wishlists/default/items/"
+                    }
+                },
+                "fit_model_product_copy": {
+                    "enabled": false,
+                    "message": "",
+                    "link": {
+                        "label": "Details",
+                        "url": "https://www.lordandtaylor.com/html/popups/m_sizechart.jsp?PRODUCT%3C%3Eprd_id=845524442636084"
+                    }
+                },
+                "is_specialized": false,
+                "is_electronic_gift_card": false,
+                "media": {
+                    "images_server_url": "//image.s5a.com/",
+                    "images_path": "is/image/LordandTaylor/",
+                    "asset_prefix": "/LordandTaylor",
+                    "images": [
+                        "0500089423948",
+                        "0500089423948_A1"
+                    ],
+                    "video_player": {
+                        "enabled": true,
+                        "video": {
+                            "small_src": "",
+                            "medium_src": "",
+                            "large_src": "//image.s5a.com/is/content/LordandTaylor/0500089423948_V486x648"
+                        },
+                        "auto_play": true,
+                        "has_video": "0"
+                    },
+                    "zoom_player": {
+                        "enabled": true,
+                        "flash_links": {
+                            "server_url": "//image.s5a.com/is/image&asset=LordandTaylor/0500089423948_IS&showVideo=0&hideThumbs=0&iscommand=op_usm%3D2.2%2C1%2C6%2C0",
+                            "player_url": "//image.s5a.com/is/content/LordandTaylor/productViewer"
+                        },
+                        "html_links": {
+                            "server_url": "//s7d9.scene7.com/is/image/",
+                            "player_url": "//s7d9.scene7.com//s7sdk/2.2/js/s7sdk/utils/Utils.js"
+                        },
+                        "image_set": "LordandTaylor/0500089423948_IS",
+                        "main_image": "LordandTaylor/0500089423948"
+                    }
+                },
+                "product_detail_page_link": {
+                    "enabled": false,
+                    "label": "View Product Detail",
+                    "url": "https://www.lordandtaylor.com/adidas-essentials-colorblock-windbreaker/product/0500089423948"
+                },
+                "social_media": {
+                    "enabled": true,
+                    "fb_like_button": {
+                        "enabled": true,
+                        "title": "Facebook",
+                        "link": "https://www.lordandtaylor.com/adidas-essentials-colorblock-windbreaker/product/0500089423948"
+                    },
+                    "pinterest_button": {
+                        "enabled": true,
+                        "title": "Pinterest",
+                        "link": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.lordandtaylor.com%2Fadidas-essentials-colorblock-windbreaker%2Fproduct%2F0500089423948&media=https%3A%2F%2Fimage.s5a.com%2Fis%2Fimage%2FLordandTaylor%2F0500089423948_300x400.jpg&description=Adidas+Essentials+Colorblock+Windbreaker"
+                    },
+                    "twitter_button": {
+                        "enabled": true,
+                        "title": "Twitter",
+                        "link": "https://twitter.com/share?url=https%3A%2F%2Fwww.lordandtaylor.com%2Fadidas-essentials-colorblock-windbreaker%2Fproduct%2F0500089423948&text=Adidas+-+Essentials+Colorblock+Windbreaker+%7C+Lord+%26+Taylor"
+                    },
+                    "google_plus_button": {
+                        "enabled": true,
+                        "title": "G+",
+                        "link": "https://plus.google.com/share?url=https%3A%2F%2Fwww.lordandtaylor.com%2Fadidas-essentials-colorblock-windbreaker%2Fproduct%2F0500089423948&text=Adidas+-+Essentials+Colorblock+Windbreaker+%7C+Lord+%26+Taylor"
+                    },
+                    "tell_a_friend_button": {
+                        "enabled": false,
+                        "title": "Tell A Friend",
+                        "link": "https://www.lordandtaylor.com/main/ComposeTAF.jsp?PRODUCT%3C%3Eprd_id=845524442636084"
+                    }
+                },
+                "personalization": {
+                    "enabled": false,
+                    "pers_add_to_bag_submit_btn": {
+                        "label": "PERSONALIZE AND ADD TO BAG",
+                        "action": {
+                            "endpoint": "",
+                            "input_value": "checkoutPers"
+                        }
+                    },
+                    "label": "Personalize this item"
+                },
+                "is_virtual": false,
+                "quantity_field": {
+                    "enabled": true,
+                    "label": "Quantity",
+                    "message": ""
+                },
+                "is_new_label": "NEW",
+                "waitlist_submit_btn": {
+                    "enabled": false,
+                    "enabled_on_page": false,
+                    "label": "Add to Wait List",
+                    "inline_waitlist_label": "Color/size unavailable?",
+                    "thank_you_message": "This item has been added to your Wait List.",
+                    "email_placeholder": "Email Address",
+                    "description": "This item is sold out. Add to Wait List to be notified when it is back in stock.",
+                    "leading_message": "This combination is not available.",
+                    "email_validation_error_message": "Enter a valid email address.",
+                    "overlay_endpoint": "/v1/waitlist-overlay-service/product/{product_code}",
+                    "add_to_waitlist_endpoint": "/v1/waitlist-service/waitlist/store-entry",
+                    "add_to_waitlist_endpoint_bmform": "waitlist_add_to_service",
+                    "failure_message": "Please select a color and/or size.",
+                    "email": {
+                        "label": "Email Address",
+                        "placeholder": "",
+                        "validation_message": "Please enter a valid email address."
+                    },
+                    "phone": {
+                        "label": "Mobile Phone Number (optional)",
+                        "placeholder": "",
+                        "validation_message": "Please enter a valid phone number."
+                    },
+                    "sign_up": {
+                        "label": "Sign up for emails.",
+                        "validation_message": ""
+                    }
+                },
+                "applepay_display_status": false,
+                "all_preorder": {
+                    "enabled": false,
+                    "label": "",
+                    "message": ""
+                },
+                "denominations": {
+                    "enabled": false,
+                    "show_denominations_as_boxes": false,
+                    "denominations": []
+                },
+                "restricted_warning_message": {
+                    "enabled": false,
+                    "message": "Warning for shipment to California",
+                    "url": "/html/contextual_popups/LeadWarning.jsp"
+                },
+                "short_description": "Essentials Colorblock Windbreaker",
+                "sold_out_message": {
+                    "enabled": false,
+                    "message": "Sold Out"
+                },
+                "shop_runner": {
+                    "enabled": false,
+                    "url": "/v1/shoprunner/",
+                    "retailer_id": "LAT"
+                },
+                "find_in_store": {
+                    "enabled": false,
+                    "url": "/v2/find-in-store-service/findStoresBySkn/{sknCode}/100/{zipCode}/Y/N"
+                },
+                "skus": {
+                    "enabled": true,
+                    "skus": [
+                        {
+                            "upc": "193105349812",
+                            "color_id": 0,
+                            "size_id": 2,
+                            "denomination_id": -1,
+                            "sku_id": "1689949380260038",
+                            "price": {
+                                "alternate_copy": "",
+                                "list_price_label": "",
+                                "list_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1683.38",
+                                    "usd_currency_value": "65.00",
+                                    "default_currency_value": "65.00"
+                                },
+                                "sale_price_label": "Now",
+                                "sale_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1262.53",
+                                    "usd_currency_value": "48.75",
+                                    "default_currency_value": "48.75"
+                                },
+                                "on_sale": true,
+                                "on_clearance": false
+                            },
+                            "status_alias": "available",
+                            "status_label": "",
+                            "status_message": "",
+                            "no_returns": {
+                                "enabled": false,
+                                "message": ""
+                            },
+                            "skn": "89423952",
+                            "limited_inventory": false,
+                            "bopus_eligible": true
+                        },
+                        {
+                            "upc": "193105349843",
+                            "color_id": 0,
+                            "size_id": 0,
+                            "denomination_id": -1,
+                            "sku_id": "1689949380259979",
+                            "price": {
+                                "alternate_copy": "",
+                                "list_price_label": "",
+                                "list_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1683.38",
+                                    "usd_currency_value": "65.00",
+                                    "default_currency_value": "65.00"
+                                },
+                                "sale_price_label": "Now",
+                                "sale_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1262.53",
+                                    "usd_currency_value": "48.75",
+                                    "default_currency_value": "48.75"
+                                },
+                                "on_sale": true,
+                                "on_clearance": false
+                            },
+                            "status_alias": "available",
+                            "status_label": "",
+                            "status_message": "",
+                            "no_returns": {
+                                "enabled": false,
+                                "message": ""
+                            },
+                            "skn": "89423950",
+                            "limited_inventory": false,
+                            "bopus_eligible": true
+                        },
+                        {
+                            "upc": "193105349836",
+                            "color_id": 0,
+                            "size_id": 3,
+                            "denomination_id": -1,
+                            "sku_id": "1689949380259970",
+                            "price": {
+                                "alternate_copy": "",
+                                "list_price_label": "",
+                                "list_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1683.38",
+                                    "usd_currency_value": "65.00",
+                                    "default_currency_value": "65.00"
+                                },
+                                "sale_price_label": "Now",
+                                "sale_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1262.53",
+                                    "usd_currency_value": "48.75",
+                                    "default_currency_value": "48.75"
+                                },
+                                "on_sale": true,
+                                "on_clearance": false
+                            },
+                            "status_alias": "available",
+                            "status_label": "",
+                            "status_message": "",
+                            "no_returns": {
+                                "enabled": false,
+                                "message": ""
+                            },
+                            "skn": "89423951",
+                            "limited_inventory": false,
+                            "bopus_eligible": true
+                        },
+                        {
+                            "upc": "193105536519",
+                            "color_id": 1,
+                            "size_id": 1,
+                            "denomination_id": -1,
+                            "sku_id": "1689949380260036",
+                            "price": {
+                                "alternate_copy": "",
+                                "list_price_label": "",
+                                "list_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1683.38",
+                                    "usd_currency_value": "65.00",
+                                    "default_currency_value": "65.00"
+                                },
+                                "sale_price_label": "Now",
+                                "sale_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1262.53",
+                                    "usd_currency_value": "48.75",
+                                    "default_currency_value": "48.75"
+                                },
+                                "on_sale": true,
+                                "on_clearance": false
+                            },
+                            "status_alias": "available",
+                            "status_label": "",
+                            "status_message": "",
+                            "no_returns": {
+                                "enabled": false,
+                                "message": ""
+                            },
+                            "skn": "89423920",
+                            "limited_inventory": false,
+                            "bopus_eligible": true
+                        },
+                        {
+                            "upc": "193105537660",
+                            "color_id": 1,
+                            "size_id": 4,
+                            "denomination_id": -1,
+                            "sku_id": "1689949380260037",
+                            "price": {
+                                "alternate_copy": "",
+                                "list_price_label": "",
+                                "list_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1683.38",
+                                    "usd_currency_value": "65.00",
+                                    "default_currency_value": "65.00"
+                                },
+                                "sale_price_label": "Now",
+                                "sale_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1262.53",
+                                    "usd_currency_value": "48.75",
+                                    "default_currency_value": "48.75"
+                                },
+                                "on_sale": true,
+                                "on_clearance": false
+                            },
+                            "status_alias": "available",
+                            "status_label": "",
+                            "status_message": "",
+                            "no_returns": {
+                                "enabled": false,
+                                "message": ""
+                            },
+                            "skn": "89423924",
+                            "limited_inventory": true,
+                            "bopus_eligible": true
+                        },
+                        {
+                            "upc": "193105349768",
+                            "color_id": 0,
+                            "size_id": 4,
+                            "denomination_id": -1,
+                            "sku_id": "1689949380259994",
+                            "price": {
+                                "alternate_copy": "",
+                                "list_price_label": "",
+                                "list_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1683.38",
+                                    "usd_currency_value": "65.00",
+                                    "default_currency_value": "65.00"
+                                },
+                                "sale_price_label": "Now",
+                                "sale_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1262.53",
+                                    "usd_currency_value": "48.75",
+                                    "default_currency_value": "48.75"
+                                },
+                                "on_sale": true,
+                                "on_clearance": false
+                            },
+                            "status_alias": "available",
+                            "status_label": "",
+                            "status_message": "",
+                            "no_returns": {
+                                "enabled": false,
+                                "message": ""
+                            },
+                            "skn": "89423948",
+                            "limited_inventory": true,
+                            "bopus_eligible": true
+                        },
+                        {
+                            "upc": "193105537684",
+                            "color_id": 1,
+                            "size_id": 3,
+                            "denomination_id": -1,
+                            "sku_id": "1689949380259985",
+                            "price": {
+                                "alternate_copy": "",
+                                "list_price_label": "",
+                                "list_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1683.38",
+                                    "usd_currency_value": "65.00",
+                                    "default_currency_value": "65.00"
+                                },
+                                "sale_price_label": "Now",
+                                "sale_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1262.53",
+                                    "usd_currency_value": "48.75",
+                                    "default_currency_value": "48.75"
+                                },
+                                "on_sale": true,
+                                "on_clearance": false
+                            },
+                            "status_alias": "available",
+                            "status_label": "",
+                            "status_message": "",
+                            "no_returns": {
+                                "enabled": false,
+                                "message": ""
+                            },
+                            "skn": "89423922",
+                            "limited_inventory": false,
+                            "bopus_eligible": true
+                        },
+                        {
+                            "upc": "193105349782",
+                            "color_id": 0,
+                            "size_id": 1,
+                            "denomination_id": -1,
+                            "sku_id": "1689949380260023",
+                            "price": {
+                                "alternate_copy": "",
+                                "list_price_label": "",
+                                "list_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1683.38",
+                                    "usd_currency_value": "65.00",
+                                    "default_currency_value": "65.00"
+                                },
+                                "sale_price_label": "Now",
+                                "sale_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1262.53",
+                                    "usd_currency_value": "48.75",
+                                    "default_currency_value": "48.75"
+                                },
+                                "on_sale": true,
+                                "on_clearance": false
+                            },
+                            "status_alias": "available",
+                            "status_label": "",
+                            "status_message": "",
+                            "no_returns": {
+                                "enabled": false,
+                                "message": ""
+                            },
+                            "skn": "89423949",
+                            "limited_inventory": false,
+                            "bopus_eligible": true
+                        },
+                        {
+                            "upc": "193105537646",
+                            "color_id": 1,
+                            "size_id": 2,
+                            "denomination_id": -1,
+                            "sku_id": "1689949380259969",
+                            "price": {
+                                "alternate_copy": "",
+                                "list_price_label": "",
+                                "list_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1683.38",
+                                    "usd_currency_value": "65.00",
+                                    "default_currency_value": "65.00"
+                                },
+                                "sale_price_label": "Now",
+                                "sale_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1262.53",
+                                    "usd_currency_value": "48.75",
+                                    "default_currency_value": "48.75"
+                                },
+                                "on_sale": true,
+                                "on_clearance": false
+                            },
+                            "status_alias": "available",
+                            "status_label": "",
+                            "status_message": "",
+                            "no_returns": {
+                                "enabled": false,
+                                "message": ""
+                            },
+                            "skn": "89423921",
+                            "limited_inventory": false,
+                            "bopus_eligible": true
+                        },
+                        {
+                            "upc": "193105537677",
+                            "color_id": 1,
+                            "size_id": 0,
+                            "denomination_id": -1,
+                            "sku_id": "1689949380259986",
+                            "price": {
+                                "alternate_copy": "",
+                                "list_price_label": "",
+                                "list_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1683.38",
+                                    "usd_currency_value": "65.00",
+                                    "default_currency_value": "65.00"
+                                },
+                                "sale_price_label": "Now",
+                                "sale_price": {
+                                    "local_currency_code": "UAH",
+                                    "local_currency_symbol": "&nbsp;",
+                                    "local_currency_value": "1262.53",
+                                    "usd_currency_value": "48.75",
+                                    "default_currency_value": "48.75"
+                                },
+                                "on_sale": true,
+                                "on_clearance": false
+                            },
+                            "status_alias": "available",
+                            "status_label": "",
+                            "status_message": "",
+                            "no_returns": {
+                                "enabled": false,
+                                "message": ""
+                            },
+                            "skn": "89423923",
+                            "limited_inventory": false,
+                            "bopus_eligible": true
+                        }
+                    ]
+                },
+                "question_and_answer": {
+                    "ask_question": {
+                        "enabled": false,
+                        "label": ""
+                    },
+                    "read_question_answer": {
+                        "enabled": false,
+                        "label": ""
+                    },
+                    "enabled": false,
+                    "questions_count": 0,
+                    "answers_count": 0,
+                    "product_code": "0500089423948",
+                    "site_key": "",
+                    "prompt": "",
+                    "tab_label": "",
+                    "anchor": "",
+                    "panel_contents_id": "TurnToContent",
+                    "title": "Questions and Answers"
+                },
+                "promo": [],
+                "reviews": {
+                    "enabled": true,
+                    "product_code": "0500089423948",
+                    "formatted_rating_average": 0,
+                    "rating_average": 0,
+                    "total_reviews": 0,
+                    "read_reviews": {
+                        "enabled": false,
+                        "label": "Read 0 Reviews"
+                    },
+                    "write_reviews": {
+                        "enabled": true,
+                        "label": "Write a Review",
+                        "url": "https://www.lordandtaylor.com/_/product/0500089423948"
+                    },
+                    "site_key": "feN5tQWwDuOnv6osite",
+                    "tab_label": "Reviews",
+                    "anchor": "reviews",
+                    "panel_contents_id": "TurnToReviewsContent",
+                    "title": "Reviews"
+                },
+                "no_returns": {
+                    "enabled": false,
+                    "message": ""
+                },
+                "is_main_product": true,
+                "product_id": "845524442636084",
+                "alternate_descriptions": {
+                    "enabled": true,
+                    "description_2": "",
+                    "description_3": "",
+                    "description_4": "",
+                    "description_5": ""
+                },
+                "hide_from_catalog": {
+                    "enabled": true,
+                    "is_hide_from_catalog": false
+                },
+                "size_guide_link": {
+                    "enabled": true,
+                    "label": "Size Guide",
+                    "url": "/html/popups/m_sizechart.jsp?PRODUCT%3C%3Eprd_id=845524442636084#105"
+                },
+                "sizes": {
+                    "enabled": true,
+                    "show_sizes_as_boxes": true,
+                    "size_label": "Choose a Size",
+                    "size_main_label": "Size",
+                    "sizes": [
+                        {
+                            "id": 0,
+                            "value": "SMALL",
+                            "is_soldout": false,
+                            "is_waitlistable": false
+                        },
+                        {
+                            "id": 1,
+                            "value": "MEDIUM",
+                            "is_soldout": false,
+                            "is_waitlistable": false
+                        },
+                        {
+                            "id": 2,
+                            "value": "LARGE",
+                            "is_soldout": false,
+                            "is_waitlistable": false
+                        },
+                        {
+                            "id": 3,
+                            "value": "X-LARGE",
+                            "is_soldout": false,
+                            "is_waitlistable": false
+                        },
+                        {
+                            "id": 4,
+                            "value": "XX-LARGE",
+                            "is_soldout": false,
+                            "is_waitlistable": false
+                        }
+                    ]
+                },
+                "is_csr_only": false
+            }
+        ],
+        "meta_objects": [
+            {
+                "name": "meta_description",
+                "content": "Content goes here"
+            }
+        ],
+        "shop_the_look_products": {
+            "label": "Complete the Look",
+            "products": []
+        },
+        "title": "",
+        "messages": {
+            "recently_viewed_title": "Recently Viewed",
+            "find_in_store_title": "Find In Store",
+            "find_in_store_zip_code": "Zip Code",
+            "find_in_store_check_stores": "Check Stores",
+            "find_in_store_service_not_available": "We cannot complete your request, please try again later",
+            "html_waitlist_disclaimer": "By opting in to Lord & Taylor Wait List Alerts, you agree to receive autodialed marketing text messages to the phone number provided at opt-in. Message frequency may vary based on customer preferences. Text <b>HELP</b> for info. Text <b>STOP</b> to cancel. Consent is not a condition of purchase. Message and data rates may apply. For more details, review our <a href=\"/Policies\" target=\"_blank\">Privacy Policy</a>.",
+            "service_down_msg": "Apologies... Please try again shortly.",
+            "zip_code_invalid_msg": "Enter a valid zip code",
+            "limited_inventory_label": "Limited Inventory",
+            "clearance_label": "Clearance",
+            "percent_off_label": "Off",
+            "msrp_legal_copy": "The strikethrough price reflects the regular price at which we've normally sold that item or, if we have not previously sold an item, the price at which that item (or a comparable item) is normally sold in the market",
+            "product_code_label": "Style code",
+            "tell_a_friend_subject": ""
+        },
+        "cookies": [],
+        "banner_for_signal": "lat",
+        "rr_quicklook_enabled": false,
+        "response": {
+            "statusCode": 200
+        },
+        "__meta": {
+            "env": "production",
+            "signal_site_key": "AWOZ6sm"
+        }
+    },
+    "Lang": {
+        "selectedLanguage": "en"
+    }
+}

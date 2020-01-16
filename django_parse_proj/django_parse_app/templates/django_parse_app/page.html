@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Products</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <script>
+            get_category = function(category){
+                element = document.createElement('div');
+                element.className = "col-2 category"
+                element.innerHTML = category
+                console.log(category)
+                return element
+            };
+
+            get_price = function(price){
+                element = document.createElement('div');
+                element.className = "col-2 price"
+                element.innerHTML = price
+                return element
+            };
+            get_title = function(title){
+                element = document.createElement('div');
+                element.className = "col-2 title"
+                element.innerHTML = title
+                return element
+            };
+            get_colors = function(colors){
+                element = document.createElement('div');
+                element.className = "col-2 colors"
+                element.innerHTML = colors
+                return element
+            };
+            get_images = function(images){
+                element = document.createElement('div');
+                element.className = "col-2 images"
+                element.innerHTML = images
+                return element
+            };
+            get_description = function(description){
+                element = document.createElement('div');
+                element.className = "col-2 description"
+                element.innerHTML = description
+                return element
+            };
+
+            const webSocket = new WebSocket('ws://localhost:8000/product/' );
+
+            add_product = function(event) {
+                let element = document.createElement('div');
+                element.className = "row product-element";
+                console.log(event)
+
+                let data = JSON.parse(event.data)
+
+                element.append(get_category(data['category']));
+                element.append(get_price(data['price']));
+                element.append(get_title(data['title']));
+                element.append(get_colors(data['colors']));
+                element.append(get_images(data['images']));
+                element.append(get_description(data['description']));
+
+                document.getElementById('root').append(element)
+            }
+            
+
+            webSocket.onmessage = event => {
+                add_product(event)
+            };
+
+        </script>
+    </head>
+
+    <body>
+        <button onclick="webSocket.send(text_data='I am ready');">tip</button>
+        <div id="root" class="container">
+            <p> Products</p>
+            <br>
+            <div class="row product-element">
+                <div class="col-2 category">category</div>
+                <div class="col-2 price">price</div>
+                <div class="col-2 title">title</div>
+                <div class="col-2 colors">colors</div>
+                <div class="col-2 images">images</div>
+                <div class="col-2 description">description</div>
+            </div>
+        </div
+    </body>
+</html>
