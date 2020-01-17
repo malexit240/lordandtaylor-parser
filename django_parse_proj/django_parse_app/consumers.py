@@ -1,6 +1,9 @@
+import json
+import logging
+
+from django.conf import settings
 from channels.generic.websocket import WebsocketConsumer
 from asgiref.sync import async_to_sync
-import json
 import redis
 
 
@@ -14,22 +17,23 @@ class ProductConsumer(WebsocketConsumer):
 
     def receive(self, text_data, bytes_data=None):
         if text_data == 'I am ready':
-            print('ready!')
             redis.Redis(host='localhost', port=6379).lpush('landt:start_urls',
-                                                           'https://www.lordandtaylor.com/Men/Clothing/Activewear/shop/_/N-4ztez6/Ne-6ja3o7')
+                                                           *settings.URLS_FOR_SCRAPING['lordandtaylor'])
+
+            logging.log(logging.INFO, 'Start scraping')
 
     def send_update(self, event):
-        print(event)
-        obj_to_send = {}
-        obj_to_send['url'] = event['url']
-        obj_to_send['category'] = event['category']
-        obj_to_send['price'] = event['price']
-        obj_to_send['title'] = event['title']
-        obj_to_send['colors'] = event['colors']
-        obj_to_send['images'] = event['images']
-        obj_to_send['description'] = event['description']
+        product = {}
+        product['url'] = event['url']
+        product['category'] = event['category']
+        product['price'] = event['price']
+        product['title'] = event['title']
+        product['colors'] = event['colors']
+        product['images'] = event['images']
+        product['description'] = event['description']
 
-        self.send(text_data=json.dumps(obj_to_send))
+        logging.log(logging.INFO, 'send info')
+        self.send(text_data=json.dumps(product))
 
     def disconnect(self, close_code):
         async_to_sync(self.channel_layer.group_discard)(

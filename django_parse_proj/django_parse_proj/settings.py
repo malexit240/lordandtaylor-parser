@@ -135,3 +135,13 @@ CHANNEL_LAYERS = {
 
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/1'
+
+PIPLINE_ITEMS_CACHE = 1000
+
+URLS_FOR_SCRAPING = {
+    'lordandtaylor': [
+        'https://www.lordandtaylor.com/Men/Clothing/Activewear/shop/_/N-4ztez6/Ne-6ja3o7',
+        'https://www.lordandtaylor.com/Men/Clothing/Suits-and-Suit-Separates/Blazers-and-Sportcoats/shop/_/N-4ztf8s/Ne-6ja3o7',
+        'https://www.lordandtaylor.com/Men/Clothing/Sweaters/Cashmere-and-Merino/shop/_/N-4ztf9b/Ne-6ja3o7',
+    ]
+}

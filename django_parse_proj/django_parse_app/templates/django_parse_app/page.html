@@ -17,7 +17,7 @@
 
             get_price = function(price){
                 element = document.createElement('div');
-                element.className = "col-2 price"
+                element.className = "col-1 price"
                 element.innerHTML = price
                 return element
             };
@@ -29,14 +29,24 @@
             };
             get_colors = function(colors){
                 element = document.createElement('div');
-                element.className = "col-2 colors"
+                element.className = "col-3 colors"
                 element.innerHTML = colors
                 return element
             };
             get_images = function(images){
                 element = document.createElement('div');
                 element.className = "col-2 images"
-                element.innerHTML = images
+                image_urls = JSON.parse(images)
+                ul = document.createElement('ul')
+                image_urls.forEach(url => {
+                    a = document.createElement('a');
+                    a.href = url;
+                    a.innerHTML = 'move to ->';
+                    li = document.createElement('li');
+                    li.append(a)
+                    ul.append(li)
+                });
+                element.append(ul)
                 return element
             };
             get_description = function(description){
@@ -63,6 +73,7 @@
                 element.append(get_description(data['description']));
 
                 document.getElementById('root').append(element)
+                document.getElementById('root').append(document.createElement('br'))
             }
             
 
@@ -74,15 +85,16 @@
     </head>
 
     <body>
-        <button onclick="webSocket.send(text_data='I am ready');">tip</button>
+        
         <div id="root" class="container">
             <p> Products</p>
             <br>
+            <button class="btn btn-info" onclick="webSocket.send(text_data='I am ready');">tip</button>
             <div class="row product-element">
                 <div class="col-2 category">category</div>
-                <div class="col-2 price">price</div>
+                <div class="col-1 price">price</div>
                 <div class="col-2 title">title</div>
-                <div class="col-2 colors">colors</div>
+                <div class="col-3 colors">colors</div>
                 <div class="col-2 images">images</div>
                 <div class="col-2 description">description</div>
             </div>
