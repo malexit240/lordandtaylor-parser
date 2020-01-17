@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
+"""this module contains scrapy pipelines"""
 
 import json
 from django_parse_app.tasks import save_product_to_db
@@ -12,6 +7,7 @@ from django.conf import settings
 
 
 def save_products(products: list):
+    """calls celery task for saving to db"""
     jsonable_products = []
     for product in products:
         p = {

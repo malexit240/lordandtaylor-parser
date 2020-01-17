@@ -1,3 +1,4 @@
+"""this module contains django signal handlers"""
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from channels.layers import get_channel_layer
@@ -8,6 +9,7 @@ from .models import Product
 
 @receiver(post_save, sender=Product)
 def send_update_info(instance: Product, **kwargs):
+    """sends product data to consumers"""
     layer = get_channel_layer()
     async_to_sync(layer.group_send)('products',
                                     {

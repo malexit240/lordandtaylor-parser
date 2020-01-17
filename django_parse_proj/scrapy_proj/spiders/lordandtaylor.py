@@ -1,3 +1,5 @@
+"""this module contains scrapy spider for parsing lordandtaylor.com"""
+
 import scrapy
 from scrapy.http import Response, Request
 from scrapy_proj.items import Product
@@ -6,6 +8,7 @@ from scrapy_redis.spiders import RedisSpider
 
 
 def get_image_urls(product: dict):
+    """returns list of urls"""
     images_ends = product['media']['images'] + [color['colorize_image_url']
                                                 for color in product['colors']['colors']
                                                 if not color['is_soldout']]
@@ -14,6 +17,7 @@ def get_image_urls(product: dict):
 
 
 def get_element_by_id(elements: dict, id: int):
+    """returns element(color or size) by id"""
     element = [element
                for element in elements
                if element['id'] == id]
@@ -23,6 +27,7 @@ def get_element_by_id(elements: dict, id: int):
 
 
 def get_colors_and_sizes(product: dict):
+    """returns a complex dict with available colors and sizes"""
 
     colors = product['colors']['colors']
     sizes = product['sizes']['sizes']
@@ -41,6 +46,7 @@ def get_colors_and_sizes(product: dict):
 
 
 def parse_details(data: dict):
+    """returns data(colors, sizes and image urls) from special json data"""
     data = data['ProductDetails']['main_products'][0]
 
     return {
@@ -50,9 +56,15 @@ def parse_details(data: dict):
 
 
 class LordAndTaylorSpider(RedisSpider):
+    """this spider parses lordandtaylor site
+
+    parse starts from category pages and scrape all products from all pages in this categories.
+    """
+
     name = 'landt'
 
     def parse_product(self, response: Response):
+        """parses product info on product page"""
 
         details = parse_details(json.loads(response.xpath(
             '//div[contains(@class,"framework-component")]/script/text()').extract_first()))
@@ -71,7 +83,9 @@ class LordAndTaylorSpider(RedisSpider):
 
         return item
 
-    def parse_pagination(self, response: Response):
+    def parse_page_with_products(self, response: Response):
+        """sends requests by product pages"""
+
         product_links = response.xpath(
             '//div[contains(@id,"product")]/@data-url').extract()[:10]  # ======DELETEME======
 
@@ -79,12 +93,14 @@ class LordAndTaylorSpider(RedisSpider):
             yield Request(link, self.parse_product, meta=response.meta)
 
     def parse(self, response: Response):
+        """sends requests by pagination"""
+
         category = response.xpath('//h1/span/text()').extract_first()
         response.meta['category'] = category
 
-        for _ in self.parse_pagination(response):
+        for _ in self.parse_page_with_products(response):
             yield _
 
         for page_url in response.xpath('//div[contains(@id,"pc-bottom")]/ol//li[contains(@class,"page-number")]/a/@href').extract():
-            yield Request('https://www.lordandtaylor.com/' + page_url, self.parse_pagination,
+            yield Request('https://www.lordandtaylor.com/' + page_url, self.parse_page_with_products,
                           meta={'category': category},)

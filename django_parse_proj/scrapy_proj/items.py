@@ -1,14 +1,9 @@
-# -*- coding: utf-8 -*-
-
-# Define here the models for your scraped items
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
-
+"""this module contains scrapy items: Product"""
 import scrapy
 
 
 class Product(scrapy.Item):
+    """Product from lordandtaylor site"""
     url = scrapy.Field()
     category = scrapy.Field()
     price = scrapy.Field()
