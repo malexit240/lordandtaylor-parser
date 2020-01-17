@@ -73,7 +73,7 @@ class LordAndTaylorSpider(RedisSpider):
 
     def parse_pagination(self, response: Response):
         product_links = response.xpath(
-            '//div[contains(@id,"product")]/@data-url').extract()[:2]  # ======DELETEME======
+            '//div[contains(@id,"product")]/@data-url').extract()[:10]  # ======DELETEME======
 
         for link in product_links:
             yield Request(link, self.parse_product, meta=response.meta)

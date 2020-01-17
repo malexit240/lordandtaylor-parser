@@ -29,7 +29,7 @@
             };
             get_colors = function(colors){
                 element = document.createElement('div');
-                element.className = "col-3 colors"
+                element.className = "col-2 colors"
                 element.innerHTML = colors
                 return element
             };
@@ -41,7 +41,7 @@
                 image_urls.forEach(url => {
                     a = document.createElement('a');
                     a.href = url;
-                    a.innerHTML = 'move to ->';
+                    a.innerHTML = 'to image ->';
                     li = document.createElement('li');
                     li.append(a)
                     ul.append(li)
@@ -56,6 +56,16 @@
                 return element
             };
 
+            get_url = function(url){
+                element = document.createElement('div');
+                element.className = "col-1 url"
+                a = document.createElement('a')
+                a.href = url
+                a.innerHTML = 'move to original page'
+                element.append(a)
+                return element
+            }
+
             const webSocket = new WebSocket('ws://localhost:8000/product/' );
 
             add_product = function(event) {
@@ -64,7 +74,8 @@
                 console.log(event)
 
                 let data = JSON.parse(event.data)
-
+                
+                element.append(get_url(data['url']))
                 element.append(get_category(data['category']));
                 element.append(get_price(data['price']));
                 element.append(get_title(data['title']));
@@ -91,10 +102,11 @@
             <br>
             <button class="btn btn-info" onclick="webSocket.send(text_data='I am ready');">tip</button>
             <div class="row product-element">
+                <div class="col-1 url">url</div>
                 <div class="col-2 category">category</div>
                 <div class="col-1 price">price</div>
                 <div class="col-2 title">title</div>
-                <div class="col-3 colors">colors</div>
+                <div class="col-2 colors">colors</div>
                 <div class="col-2 images">images</div>
                 <div class="col-2 description">description</div>
             </div>
